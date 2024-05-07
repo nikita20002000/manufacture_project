@@ -6,7 +6,7 @@ def show_leftbar():
     return sac.menu([
         sac.MenuItem('Главная', icon='house-fill'),
 
-        sac.MenuItem('Календарь', icon='calendar-day-fill'),
+        sac.MenuItem('Календарь', icon='calendar_p-day-fill'),
         sac.MenuItem('Менеджер задач', icon='list-task'),
         sac.MenuItem('CRM', icon='kanban-fill'),
 
