@@ -1,0 +1,11 @@
+ID,Type,TechChar,DaysToService,MaxPower,MaxSize,StagnationTime,DefectMember,DefectGuilty
+M001,Type1,Massive of Technical Characteristics,100,1000H,120,0,0,0
+M002,Type2,Massive of Technical Characteristics,100,1000H,80,0,0,0
+M003,Type3,Massive of Technical Characteristics,100,1000H,40,0,0,0
+M004,Type2,Massive of Technical Characteristics,100,1000H,60,0,0,0
+M005,Type1,Massive of Technical Characteristics,100,1000H,100,0,0,0
+M006,Type3,Massive of Technical Characteristics,100,1000H,120,0,0,0
+M007,Type1,Massive of Technical Characteristics,100,1000H,100,0,0,0
+M008,Type2,Massive of Technical Characteristics,100,1000H,80,0,0,0
+M009,Type1,Massive of Technical Characteristics,100,1000H,100,0,0,0
+M0010,Type3,Massive of Technical Characteristics,100,1000H,110,0,0,0

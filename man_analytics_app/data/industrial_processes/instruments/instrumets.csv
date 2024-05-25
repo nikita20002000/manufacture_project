@@ -1,0 +1,11 @@
+ID,Type,TechChar,Wear,DaysToService,DefectMember,DefectGuilty
+I001,Cutter,Massive of Technical Characteristics,0.2,80,0,0
+I002,MillCutter,Massive of Technical Characteristics,0.8,20,0,0
+I003,MillCutter,Massive of Technical Characteristics,0.4,60,0,0
+I004,MillCutter,Massive of Technical Characteristics,0.6,40,0,0
+I005,Cutter,Massive of Technical Characteristics,0.1,90,0,0
+I006,Cutter,Massive of Technical Characteristics,0,100,0,0
+I007,Cutter,Massive of Technical Characteristics,0.5,50,0,0
+I008,MillCutter,Massive of Technical Characteristics,0.8,20,0,0
+I009,Cutter,Massive of Technical Characteristics,0.6,40,0,0
+I0010,Cutter,Massive of Technical Characteristics,0.3,70,0,0

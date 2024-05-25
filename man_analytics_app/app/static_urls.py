@@ -1,0 +1,1 @@
+ABSOLUTE_DATA_URL = 'data/'

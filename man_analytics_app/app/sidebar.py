@@ -6,7 +6,7 @@ def show_leftbar():
     return sac.menu([
         sac.MenuItem('Главная', icon='house-fill'),
 
-        sac.MenuItem('Календарь', icon='calendar_p-day-fill'),
+        sac.MenuItem('Календарь', icon='calendar-range'),
         sac.MenuItem('Менеджер задач', icon='list-task'),
         sac.MenuItem('CRM', icon='kanban-fill'),
 
@@ -15,6 +15,7 @@ def show_leftbar():
             sac.MenuItem('Инструмент', icon='screwdriver'),
             sac.MenuItem('Сотрудники', icon='people-fill'),
             sac.MenuItem('Журнал', icon='calendar2-range-fill'),
+            sac.MenuItem('Контроль производства', icon='cone-striped'),
 
         ]),
 
@@ -25,7 +26,7 @@ def show_leftbar():
 
         sac.MenuItem(type='divider'),
 
-        sac.MenuItem('link', type='group', children=[
+        sac.MenuItem('', type='group', children=[
             sac.MenuItem('Обо мне', icon='heart-fill'),
             sac.MenuItem('Поддержка Bootstrap', icon='bootstrap-fill', href='https://icons.getbootstrap.com/'),
             sac.MenuItem('GitHub Nikita20002000', icon='github', href='https://github.com/nikita20002000')

@@ -1,0 +1,11 @@
+ID,Material,Size,CreationMethod,DefectMember,DefectGuilty
+WP001,M1,80,Method1,0,0
+WP002,M1,120,Method2,0,0
+WP003,M1,40,Method1,0,0
+WP004,M1,50,Method3,0,0
+WP005,M1,60,Method2,0,0
+WP006,M1,80,Method1,0,0
+WP007,M1,100,Method2,0,0
+WP008,M1,20,Method3,0,0
+WP009,M1,40,Method1,0,0
+WP0010,M1,50,Method2,0,0
