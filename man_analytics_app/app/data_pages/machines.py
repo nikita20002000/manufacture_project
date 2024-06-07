@@ -15,6 +15,9 @@ def read_machine_data():
 
 
 def show_machines_page():
+    # Стили
+    local_css("static/style.css")
+
     st.title('Мониторинг работы')
     st.header('Список оборудования')
     st.markdown('#### В данном разделе находится весь список оборудования и статус его работы')
@@ -22,7 +25,9 @@ def show_machines_page():
 
     machines = update_work().sort_values('InWork', ascending=False)
     machines = machines.set_index('ID')
-    print(machines.head())
+
+
+
     for machine in machines.index:
 
         col1, col2, col3, col4, col5 = st.columns(5, gap='small')
@@ -70,6 +75,9 @@ def show_machines_page():
         """)
 
 
+def local_css(file_name):
+        with open(file_name) as f:
+            st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
 
 
 
@@ -82,3 +90,4 @@ def update_work():
     machine_df['InWork'] = np.random.randint(0,2, size=10)
 
     return machine_df
+

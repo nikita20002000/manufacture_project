@@ -14,11 +14,12 @@ from settings.user_config import show_settings
 from task_manager.manager import show_manager
 from calendar_p import calendar_page
 
-from data_pages import journal, emloyee, machines
+from data_pages import journal, emloyee, machines, instruments
 
 import data_pages
 
 def main():
+    st.set_page_config(layout="wide")
     log = login()
     auth = log.authenticator()
     auth.login()
@@ -49,6 +50,9 @@ def main():
 
             case "Оборудование":
                 machines.show_machines_page()
+
+            case "Инструмент":
+                pass
 
             case "Сотрудники":
                 emloyee.show_employee_page()
