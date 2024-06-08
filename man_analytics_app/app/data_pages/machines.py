@@ -15,8 +15,12 @@ def read_machine_data():
 
 
 def show_machines_page():
-    # Стили
+
+    # Стили добавляем в разметку страницы
     local_css("static/style.css")
+
+    # Импортируем бутстрап
+    import_bootstrap()
 
     st.title('Мониторинг работы')
     st.header('Список оборудования')
@@ -30,7 +34,7 @@ def show_machines_page():
 
     for machine in machines.index:
 
-        col1, col2, col3, col4, col5 = st.columns(5, gap='small')
+        col1, col2, col3, col4, col5, col6 = st.columns(6, gap='small')
 
 
         with col1:
@@ -53,7 +57,7 @@ def show_machines_page():
             match machines.at[machine, 'MachineStatus']:
 
                 case 'ОК':
-                    with st.popover(f'Статус ✅'):
+                    with st.popover('Статус ✅'):
                         st.markdown('### Оборудование работает исправно!')
 
                 case 'Внимание':
@@ -65,6 +69,9 @@ def show_machines_page():
                         st.markdown('### Критическая ошибка работы')
 
 
+        with col6:
+            with st.popover('Сведения'):
+                st.markdown('### Здесь будут отображаться дополнительные сведения о неисправностях!!!')
 
         st.html("""
         <style>
@@ -73,6 +80,10 @@ def show_machines_page():
             }
         </style>
         """)
+        st.html("""
+        <div class='container-fluid divider'></div> 
+        
+        """)
 
 
 def local_css(file_name):
@@ -80,6 +91,8 @@ def local_css(file_name):
             st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
 
 
+def import_bootstrap():
+    st.markdown(f'<script src = "https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity = "sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin = "anonymous" > < / script >', unsafe_allow_html=True)
 
 
 

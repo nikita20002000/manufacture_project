@@ -9,15 +9,16 @@ def show_leftbar():
         sac.MenuItem('Календарь', icon='calendar-range'),
         sac.MenuItem('Менеджер задач', icon='list-task'),
         sac.MenuItem('CRM', icon='kanban-fill'),
+        sac.MenuItem('Управление клиентами', icon='people-fill'),
 
         sac.MenuItem('Мониторинг', icon='box-fill', children=[
             sac.MenuItem('Оборудование', icon='cpu'),
             sac.MenuItem('Инструмент', icon='screwdriver'),
             sac.MenuItem('Сотрудники', icon='people-fill'),
             sac.MenuItem('Журнал', icon='calendar2-range-fill'),
-            sac.MenuItem('Контроль производства', icon='cone-striped'),
 
         ]),
+        sac.MenuItem('Контроль производства', icon='cone-striped'),
 
         sac.MenuItem(type='divider'),
 

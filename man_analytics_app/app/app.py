@@ -16,6 +16,7 @@ from calendar_p import calendar_page
 
 from data_pages import journal, emloyee, machines, instruments
 
+from account import account_page
 import data_pages
 
 def main():
@@ -59,6 +60,10 @@ def main():
 
             case "Журнал":
                 journal.show_journal_page()
+
+            case "Личный Кабинет":
+                account_page.show_account()
+
 
 
     elif st.session_state["authentication_status"] is False:

@@ -64,7 +64,7 @@ def task_manager():
             task_deadline = st.date_input(label='Дедлайн', key='deadline')
             complete = st.checkbox('Завершена', key='complete')
 
-            submit = st.form_submit_button('dffds', on_click=create_task)
+            submit = st.form_submit_button('Создать задачу', on_click=create_task)
 
 
 
@@ -104,7 +104,7 @@ def show_tasks(tasks):
         {'Название задачи': i, 'Описание': tasks[i]["description"], 'Срок': tasks[i]["deadline"], 'Статус':tasks[i]["complete"]} for i in tasks.keys()
     ]
 
-    st.data_editor(tasks_df, width=800,)
+    st.data_editor(tasks_df, use_container_width=True)
 
 
 
