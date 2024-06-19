@@ -1,3 +1,4 @@
+# TODO: Закончить общий функционал классов станков
 class Machine:
     def __init__(self,
                  machine_id: str,
@@ -7,7 +8,7 @@ class Machine:
                  max_power: int,
                  max_size: int,
                  stag_time: float,
-                 is_working: bool,
+                 is_working: bool or int,
                  instrument: object,
                  sensor: object,
                  defect_member=False,
@@ -57,7 +58,9 @@ class Machine:
         return self.is_working
 
     def __str__(self):
-        return f'Станок - {self.id} \nТип оборудования - {self.type} \nБазовые технические характеристики - {self.tech_char}'
+        return f'Станок - {self.machine_id} \n' \
+               f'|   Тип оборудования - {self.type} \n' \
+               f'|   Базовые технические характеристики - {self.tech_char}'
 
     # Дописать
     def prepare_to_work(self):
