@@ -17,6 +17,27 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="/man_analytics_app/data/company_data/client_data.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/man_analytics_app/data/company_data/sells_data.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/man_analytics_app/data/industrial_processes/instruments/instrumets.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="/man_analytics_app/data/industrial_processes/machine_data/machines.csv">
           <value>
             <Attribute>
@@ -32,13 +53,6 @@
           </value>
         </entry>
         <entry key="/man_analytics_app/data/industrial_processes/workpieces/workpieces.csv">
-          <value>
-            <Attribute>
-              <option name="separator" value="," />
-            </Attribute>
-          </value>
-        </entry>
-        <entry key="/man_analytics_app/data/instruments/instrumets.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />

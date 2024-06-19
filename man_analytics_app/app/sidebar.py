@@ -4,7 +4,7 @@ def show_leftbar():
     import streamlit_antd_components as sac
 
     return sac.menu([
-        sac.MenuItem('Главная', icon='house-fill'),
+        sac.MenuItem('Дэшборд', icon='house-fill'),
 
         sac.MenuItem('Календарь', icon='calendar-range'),
         sac.MenuItem('Менеджер задач', icon='list-task'),
@@ -24,6 +24,7 @@ def show_leftbar():
 
         sac.MenuItem('Личный кабинет', icon='person-fill'),
         sac.MenuItem('Настройки', icon='gear-fill'),
+        sac.MenuItem('TEST', icon='gear-fill'),
 
         sac.MenuItem(type='divider'),
 

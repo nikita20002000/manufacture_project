@@ -11,6 +11,7 @@ class Machine:
                  is_working: bool or int,
                  instrument: object,
                  sensor: object,
+                 workpiece: object,
                  defect_member=False,
                  defect_member_counter=0,
                  defect_guilty=False,
@@ -32,6 +33,7 @@ class Machine:
         self.status = status
         self.instrument = instrument
         self.sensor = sensor
+        self.workpiece  = workpiece
 
     def __repr__(self):
         return f'+----------------------------------------------------------------------------------------------------------------------------------------+\n' \
@@ -46,10 +48,14 @@ class Machine:
                f'  stag_time (время простоя оборудования) - {self.stag_time}\n' \
                f'  is_working (В работе или нет, -> Boolean) - {self.is_working}\n' \
                f'  defect_member (Участвовал ли в браке) - {self.defect_member}\n' \
+               f'  defect_member_counter (Счетчик участия в браке) - {self.defect_member_counter}\n' \
                f'  defect_guilty (Виноват ли в браке) - {self.defect_guilty}\n' \
+               f'  defect_guilty_counter (Счетчик вины в браке) - {self.defect_guilty}\n' \
                f'  status (Статус оборудования (Показатели оборудования, предварительная оценка состояния оборудования, полученная от датчиков))) - {self.status}\n' \
                f'+----------------------------------------------------------------------------------------------------------------------------------------+\n' \
                f'  instrument (подключенный объект - инструмент) - {self.instrument}\n' \
+               f'+----------------------------------------------------------------------------------------------------------------------------------------+\n' \
+               f'  workpiece (заготовка в станке) - {self.workpiece}\n' \
                f'+----------------------------------------------------------------------------------------------------------------------------------------+\n' \
                f'  sensor (подключенные датчики мониторинга) - {self.sensor}\n' \
                f'+----------------------------------------------------------------------------------------------------------------------------------------+\n'

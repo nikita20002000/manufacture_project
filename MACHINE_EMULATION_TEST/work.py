@@ -4,14 +4,24 @@ from machine import Machine
 from sensor import Sensor
 from employee import Employee, Machine_worker
 from instrument import Instrument
+from workpiece import Workpiece
+
 
 # TODO: Организовать полностью эмуляцию рабочего процесса
 
 
-sensor_1 = Sensor(id='str',
-                  type='str',
+sensor_1 = Sensor(sensor_id='str',
+                  sensor_type='str',
                   mark=10,
                   state='str')
+
+
+workpiece_1 = Workpiece(workpiece_id='str',
+                        material='str',
+                        size=34.2,
+                        obtain_method='str')
+
+
 
 inst_1 = Instrument(instrument_id='str',
                     instrument_type='str',
@@ -28,6 +38,7 @@ machine_1 = Machine(machine_id='str',
                     stag_time=10.0,
                     is_working=True,
                     instrument=inst_1,
+                    workpiece=workpiece_1,
                     sensor=sensor_1)
 
 w_1 = Machine_worker(worker_id='str',
@@ -37,7 +48,7 @@ w_1 = Machine_worker(worker_id='str',
                      address='str',
                      is_working=1,
                      instrument=inst_1,
-                     machine=machine_1)
+                     machine=machine_1,)
 
 
 w_1.total_operations += 10242

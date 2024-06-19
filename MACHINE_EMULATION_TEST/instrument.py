@@ -1,17 +1,6 @@
 # TODO: Закончить общий функционал классов инструметов
 
 class Instrument:
-    class_description = 'Класс Instrument - эмулятор инструментов в револьверной головке станка\n' \
-                        'instrument_id: Идентификационный номер инструмента\n' \
-                        'instrument_type: тип инструмента\n' \
-                        'tech_char - технические характеристики инструмента' \
-                        'tech_state - техническое состояние инструмента от 0 до 10' \
-                        'state: состояние инструмента' \
-                        'defect_member - участвовал ли в браке' \
-                        'defect_member_counter - переменная / счетчик кол-ва раз участия в браке' \
-                        'defect_guilty - виноват ли в браке (True / False)' \
-                        'defect_guilty_counter - переменная / счетчик кол-ва раз вины в браке'
-
     def __init__(self,
                  instrument_id: str,
                  instrument_type: str,
@@ -25,7 +14,7 @@ class Instrument:
                  ):
 
         self.instrument_id = instrument_id
-        self.type = instrument_type
+        self.instrument_type = instrument_type
         self.tech_char = tech_char
         self.tech_state = tech_state
         self.state = state
@@ -34,9 +23,24 @@ class Instrument:
         self.defect_guilty = defect_guilty
         self.defect_guilty_counter = defect_guilty_counter
 
+    def __repr__(self):
+        return f'+----------------------------------------------------------------------------------------------------------------------------------------+\n' \
+               f'| Класс Инструмент - эмулятор инструмента                                                                                                       |\n' \
+               f'+----------------------------------------------------------------------------------------------------------------------------------------+\n' \
+               f'  instrument_id (Идентификационный номер инструмента) {self.instrument_id}\n' \
+               f'  instrument_type (тип инструмента) - {self.instrument_type}\n' \
+               f'  tech_char (технические характеристики инструмента) - {self.tech_char}\n' \
+               f'  tech_state (техническое состояние инструмента от 0 до 10) - {self.tech_state}\n' \
+               f'  state (состояние инструмента) - {self.state}\n' \
+               f'  defect_member_counter (Счетчик участия в браке) - {self.defect_member_counter}\n' \
+               f'  defect_guilty (Виноват ли в браке) - {self.defect_guilty}\n' \
+               f'  defect_guilty_counter - переменная / счетчик кол-ва раз вины в браке - {self.defect_guilty_counter}\n' \
+               f'+----------------------------------------------------------------------------------------------------------------------------------------+\n'
+
+
     def __str__(self):
         return f'(Инструмент - {self.instrument_id}) \n' \
-               f'|   Тип датчика - {self.type} \n' \
+               f'|   Тип инструмента - {self.instrument_type} \n' \
                f'|   Текущее состояние - {self.state}'
 
     def set_instrument(self):

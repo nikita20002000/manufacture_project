@@ -1,11 +1,6 @@
 # TODO: Закончить общий функционал классов датчиков
 
 class Sensor:
-    class_description = 'Класс Sensor - эмулятор датчиков оборудования\n' \
-                        'id: Идентификационный номер датчика\n' \
-                        'type: тип датчика\n' \
-                        'mark: показатель датчика\n' \
-                        'state: состояние датчика'
 
     def __init__(self,
                  sensor_id: str,
@@ -16,6 +11,16 @@ class Sensor:
         self.sensor_type = sensor_type
         self.mark = mark
         self.state = state
+
+    def __repr__(self):
+        return f'+----------------------------------------------------------------------------------------------------------------------------------------+\n' \
+               f'| Класс Датчик- эмулятор датчиков оборудования                                                                                                      |\n' \
+               f'+----------------------------------------------------------------------------------------------------------------------------------------+\n' \
+               f'  sensor_id (Идентификационный номер датчика) - {self.sensor_id}\n' \
+               f'  sensor_type (тип датчика) - {self.sensor_type}\n' \
+               f'  mark (показатель датчика) - {self.mark}\n' \
+               f'  state (состояние датчика) - {self.state}\n' \
+               f'+----------------------------------------------------------------------------------------------------------------------------------------+\n'
 
     def __str__(self):
         return f'(Датчик - {self.sensor_id}) \n' \
@@ -67,5 +72,26 @@ class Defect_sensor(Sensor):
     def send_message(self):
         return f'| Окончание обработки заготовки до конечного изделия \n' \
                f'Результат - {"Брак" if self.defect else "Успешно ✅"}'
+
+class Net_sensor(Sensor):
+    def __init__(self,
+                 sensor_id: str,
+                 sensor_type: str,
+                 mark: 0,
+                 in_work = False,
+                 net_data = [],
+                 ):
+        super().__init__(sensor_id, sensor_type, mark)
+        self.in_work = in_work
+        self.net_data = net_data
+
+
+    def start_work(self):
+        self.in_work = True
+
+    # Мониторинг
+    def net_monitoring_process(self, net_state):
+        self.net_data.append(net_state)
+
 
 
